@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="add-customer" method='POST' enctype="multipart/form-data">
+        {%csrf_token%}
+        <p>User ID</p>
+    <input type="text" name='userID'>
+    <br>
+    <p>First Name</p>
+    <input type="text" name='userFirstName'>
+    <br>
+    <p>Last Name</p>
+    <input type="text" name='userLastName'>
+    <br>
+    <p>Age</p>
+    <input type="text" name='userAge'>
+    <br>
+    <p>Gender</p>
+    <input type="text" name='userGender'>
+    <br>
+    <p>District</p>
+    <input type="text" name='userDistrict'>
+    <br>
+    <p>State</p>
+    <input type="text" name='userState'>
+    <br>
+    <p>Nationality</p>
+    <input type="text" name='userNationality'>
+    <br>
+    <p>Aadhaar</p>
+    <input type="text" name='userAadhaar'>
+    <br>
+    <p>Email</p>
+    <input type="text" name='userEmail'>
+    <br>
+    <p>Contact</p>
+    <input type="text" name='userContact'>
+    <br>
+
+  <p>Image</p>
+  <input type="file" name='userImage'>
+
+    <button type='submit'>Submit</button>
+</form>
+</body>
+</html>

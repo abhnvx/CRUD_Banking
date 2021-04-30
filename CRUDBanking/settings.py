@@ -37,7 +37,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'newaccount',
 ]
+
+
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'djangodb',  
+        'USER':'admin',  
+        'PASSWORD':'bankadmin',  
+        'HOST':'localhost',  
+        'PORT':'3306'  
+    }  
+}  
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

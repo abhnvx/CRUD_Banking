@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Customer</title>
+</head>
+<body>
+    <form action="" method='POST' enctype="multipart/form-data">
+        {%csrf_token%}
+    
+        <p>User ID</p>
+    <input type="text" name='userID' value="{{newUser.userID}}">
+    <br>
+    <p>First Name</p>
+    <input type="text" name='userFirstName' value="{{newUser.userFirstName}}" >
+    <br>
+    <p>Last Name</p>
+    <input type="text" name='userLastName' value="{{newUser.userLastName}}" >
+    <br>
+    <p>Age</p>
+    <input type="text" name='userAge' value="{{newUser.userAge}}" >
+    <br>
+    <p>Gender</p>
+    <input type="text" name='userGender' value="{{newUser.userGender}}" >
+    <br>
+    <p>District</p>
+    <input type="text" name='userDistrict' value="{{newUser.userDistrict}}" >
+    <br>
+    <p>State</p>
+    <input type="text" name='userState' value="{{newUser.userState}}" >
+    <br>
+    <p>Nationality</p>
+    <input type="text" name='userNationality' value="{{newUser.userNationality}}" >
+    <br>
+    <p>Aadhaar</p>
+    <input type="text" name='userAadhaar' value="{{newUser.userAadhaar}}" >
+    <br>
+    <p>Email</p>
+    <input type="text" name='userEmail' value="{{newUser.userEmail}}" >
+    <br>
+    <p>Contact</p>
+    <input type="text" name='userContact' value="{{newUser.userContact}}" >
+    <br>
+
+  <p>Image</p>
+  <input type="file" name='userImage'>
+<label for="userImage">Current = {{newUser.image}}</label>
+    <button type='submit'>Submit</button>
+</form>
+</body>
+</html>
