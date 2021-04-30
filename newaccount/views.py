@@ -5,11 +5,11 @@ from django.views.generic import TemplateView,UpdateView
 # Create your views here.
 
 def index(request):
-    return HttpResponse('hi')
+    return render(request,'main.html')
 
 
 class AddcustomerView(TemplateView):
-    template_name = 'index.html'
+    template_name = 'add.html'
     def get(self,request):
         return render(request,self.template_name)
     def post(self,request):
