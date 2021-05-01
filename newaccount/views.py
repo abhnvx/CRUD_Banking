@@ -1,12 +1,12 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
+from django.template import RequestContext
 from .models import newUser
 from django.views.generic import TemplateView,UpdateView
 # Create your views here.
 
 def index(request):
-    return render(request,'main.html')
-
+    return render(request, "main.html")
 
 class AddcustomerView(TemplateView):
     template_name = 'add.html'
@@ -25,6 +25,17 @@ class AddcustomerView(TemplateView):
         userEmail = request.POST['userEmail']
         userContact = request.POST['userContact']
         userImage = request.FILES['userImage']
+        userAadhaarImage = request.FILES['userAadhaarImage']
+        userStartingBalance = request.POST['userStartingBalance']
+        userRemarks = request.POST['userRemarks']
+
+
+        if 'tccheck' in request.POST:
+            tc = request.POST['tccheck']
+        else:
+            tc = False
+
+
         newCustomer = newUser(
             userID=userID,
             userFirstName=userFirstName,
@@ -37,7 +48,11 @@ class AddcustomerView(TemplateView):
             userAadhaar=userAadhaar,
             userEmail=userEmail,
             userContact=userContact,
-            userImage=userImage
+            userImage=userImage,
+            userAadhaarImage=userAadhaarImage,
+            userStartingBalance=userStartingBalance,
+            userRemarks=userRemarks,
+            tc=tc
         )
         newCustomer.save()
         return render(request,self.template_name)
@@ -79,6 +94,8 @@ class UpdatecustomerView(TemplateView):
         userAadhaar = request.POST['userAadhaar']
         userEmail = request.POST['userEmail']
         userContact = request.POST['userContact']
+        userStartingBalance = request.POST['userStartingBalance']
+        userRemarks = request.POST['userRemarks']
 
         to_update = newUser.objects.get(pk=pk)
         to_update.userID = userID
@@ -92,6 +109,9 @@ class UpdatecustomerView(TemplateView):
         to_update.userAadhaar = userAadhaar
         to_update.userEmail = userEmail
         to_update.userContact = userContact
+        to_update.userStartingBalance = userStartingBalance
+        to_update.userRemarks = userRemarks
+
 
 
         if 'userImage' in request.FILES:
@@ -99,4 +119,16 @@ class UpdatecustomerView(TemplateView):
         else:
             pass
         to_update.save()
+
+
+        if 'userAadhaarImage' in request.FILES:
+            to_update.userAadhaarImage = request.FILES['userAadhaarImage']
+        else:
+            pass
+        to_update.save()
+
+        if 'tccheck' in request.POST:
+            to_update.tc = True
+        else:
+            to_update.tc = False
         return redirect('list-customer')

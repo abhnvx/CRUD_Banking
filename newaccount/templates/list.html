@@ -36,7 +36,11 @@ tr:nth-child(even) {
     <th>Aadhaar</th>
     <th>Email</th>
     <th>Contact</th>
+    <TH>Starting Balance</TH>
     <th>Image</th>
+    <th>Aadhaar Image</th>
+    <th>Remarks</th>
+    <th>Terms</th>
     <th>Update</th>
     <th>Delete</th>
   </tr>
@@ -53,7 +57,11 @@ tr:nth-child(even) {
     <td>{{newUser.userAadhaar}}</td>
     <td>{{newUser.userEmail}}</td>
     <td>{{newUser.userContact}}</td>
+    <td>{{newUser.userStartingBalance}}</td>
     <td><a href="{{newUser.userImage.url}}"><img height=50 width=50 src="{{newUser.userImage.url}}" alt="{{newUser.userID}}"></a></td>
+    <td><a href="{{newUser.userAadhaarImage.url}}"><img height=50 width=50 src="{{newUser.userAadhaarImage.url}}" alt="{{newUser.userID}}"></a></td>
+    <td>{{newUser.userRemarks}}</td>
+    <td>{{newUser.tccheck}}</td>
     <td><a href="update-customer/{{newUser.pk}}">Update</a></td>
     <td><a href="delete-customer/{{newUser.pk}}">Delete</a></td>
 

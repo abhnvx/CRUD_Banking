@@ -43,10 +43,21 @@
     <p>Contact</p>
     <input type="text" name='userContact' value="{{newUser.userContact}}" >
     <br>
+    <p>Customer Starting Balance</p>
+    <input type="text" name='userStartingBalance' value="{{newUser.userStartingBalance}}">
+    <br>
+    <p>Customer Remarks</p>
+    <textarea name="userRemarks" cols="30" rows="10">{{newUser.userRemarks}}</textarea>
+    <br>
 
-  <p>Image</p>
+  <p>Customer Image</p>
   <input type="file" name='userImage'>
 <label for="userImage">Current = {{newUser.image}}</label>
+
+<p>Aadhaar Image</p>
+  <input type="file" name='userAadhaarImage'>
+<label for="userAadhaarImage">Current ={{newUser.userAadhaarImage}}</label>
+
     <button type='submit'>Submit</button>
 </form>
 </body>
