@@ -27,7 +27,7 @@
 
     <form action="add-customer" method='POST' enctype="multipart/form-data">
         {%csrf_token%}
-
+    <h2>eKYC Facility</h2>
     <p>Customer ID</p>
     <input type="text" name='userID'>
     <br>
@@ -84,7 +84,7 @@
   <input type="checkbox" id="tccheck" name="tccheck" value="True">
   <label for="tccheck"> Accept Terms & Conditions?</label><br>
 
-    <button type='submit' class="btn btn-primary" >Submit</button>
+    <button type='submit' class="btn btn-primary"  onclick="return confirm('Are you sure you want to add new Customer?')" >Submit</button>
 </form>
 </body>
 </html>
