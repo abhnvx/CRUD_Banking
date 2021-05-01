@@ -1,0 +1,893 @@
+* {
+    box-sizing: border-box;
+    --darkBlue: hsl(233, 26%, 24%);
+    --limeGreen: hsl(136, 65%, 51%);
+    --brightCyan: hsl(192, 70%, 51%);
+    --grayishBlue: hsl(233, 8%, 62%);
+    --lightGrayishBlue: hsl(220, 16%, 96%);
+    --veryLightGray: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Public Sans", "Helvetica";
+    background: var(--veryLightGray);
+}
+
+.header {
+    background: white;
+    box-shadow: 0px 5px 0px var(--veryLightGray);
+}
+
+.topHeader {
+    background: var(--white);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation ul, .mobileNav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLink {
+    font-size: 14px;
+    display: inline-block;
+    padding: 22px 15px;
+    text-decoration: none;
+    color: var(--grayishBlue);
+    border-bottom: 5px solid var(--white);
+}
+
+.navLink.active {
+    border-bottom: 5px solid var(--limeGreen);
+    padding: 22px 15px;
+    color: black;
+}
+
+.navLink:hover:not(.active) {
+    color: black;
+    border-bottom: 5px solid var(--limeGreen);
+    padding: 22px 15px;
+}
+
+#requestBtn {
+    background: var(--limeGreen);
+    background: -webkit-linear-gradient(left, var(--limeGreen), var(--brightCyan));
+    background: -o-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: -moz-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    padding: 15px 25px;
+    border-radius: 25px;
+    color: var(--white);
+    font-size: 14px;
+    border: none; 
+    transition: opacity 0.4s ease-in;
+}
+
+#requestBtn:focus {
+    outline: none;
+}
+
+#requestBtn:hover {
+    opacity: 0.6;
+}
+
+.navToggler {
+    display: none;
+}
+
+.mobileNav {
+    display: none;
+}
+
+.digitalBanking {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
+    width: 100%;
+    height: 650px;
+    background: var(--veryLightGray);
+}
+
+.dgtBankInfo {
+    margin: auto 5% auto 10%;
+    width: 35%;
+}
+
+.dgtBankInfo h1, .chooseEbank h1 {
+    font-size: 50px;
+    font-weight: 200;
+    color: var(--darkBlue);
+}
+
+.text-muted {
+    color: var(--grayishBlue);
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.dgtBankInfo #requestBtn {
+    margin: 25px 0;
+}
+
+.dgtBankImg {
+    background: url("./images/bg-intro-desktop.svg");
+    background-position: 12% 75%;
+    width: 50%;
+    height: 650px;
+}
+
+.dgtBankImg img {
+    width: 100%;
+    height: 850px;
+    overflow: auto !important;
+    object-position: 100px -100px;
+    object-fit: cover;
+}
+
+.chooseEbank {
+    padding: 5% 10%;
+    background: var(--lightGrayishBlue);
+}
+
+.easyBank {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5% 0;
+}
+
+.easyBank h1 {
+    font-size: 24px;
+    margin: 40px 0;
+    color: var(--darkBlue);
+}
+
+.easyBank div {
+    width: 23%;
+}
+
+.articles {
+    background: var(--veryLightGray);
+    padding: 5% 10%;
+}
+
+.articles h1 {
+    color: var(--darkBlue);
+    font-weight: 300;
+}
+
+.articlesList {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row nowrap;
+    padding: 30px 0;
+}
+
+.latestArticles {
+    width: 24%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px 10px 0 0;
+    background: var(--white);
+    overflow: hidden;
+}
+
+.latestArticles img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.latestArticles div {
+    padding: 20px 25px;
+}
+
+.latestArticles div a {
+    color: var(--darkBlue);
+    font-weight: lighter;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.latestArticles div a:hover {
+    color: var(--limeGreen);
+}
+
+.authorMuted {
+    color: var(--grayishBlue);
+    font-size: 10px;
+}
+
+.latestArticles .text-muted {
+    line-height: 20px;
+    font-size: 13px;
+    text-align: justify;
+}
+
+.footer {
+    padding: 5% 10%;
+    background: var(--darkBlue);
+    
+}
+
+.footerList {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footerDiv {
+    align-self: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.footerDiv a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+.footerDiv a:hover {
+    color: var(--limeGreen);
+}
+
+#link:hover {
+    fill: var(--limeGreen);
+}
+
+.footerDiv:last-child {
+    align-items: flex-end;
+    width: 40%;
+}
+
+.footerDiv:last-child p {
+    margin: 15px 0 0 0;
+    font-size: 14px;
+    color: var(--grayishBlue);
+}
+
+.footerDiv:last-child a {
+    display: inline-block;
+}
+
+.footerDiv svg:first-child {
+    margin: 0 10px 0px 10px;
+}
+
+.socialLinks {
+    margin-top: 40px;
+}
+
+.footerDiv #requestBtn {
+    opacity: 0.8;
+}
+
+.footerDiv #requestBtn:hover {
+    background: var(--limeGreen);
+    background: -webkit-linear-gradient(left, var(--limeGreen), var(--brightCyan));
+    background: -o-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: -moz-linear-gradient(right, var(--limeGreen), var(--brightCyan));
+    background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+    opacity: 1;
+}
+
+#logoFill {
+    fill: white;
+}
+
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+    color: var(--darkBlue);
+}
+
+.attribution a {
+    color: var(--limeGreen);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        position: relative;
+    }
+
+    .topHeader {
+        padding: 25px 0;
+    }
+
+    .navigation, .topHeader #requestBtn {
+        display: none;
+    }
+
+    .navToggler {
+        display: block;
+    }
+
+    .display {
+        display: block;
+        color: var(--grayishBlue);
+    }
+
+    .hide {
+        display: none;
+        color: var(--grayishBlue);
+    }
+
+    .mobileNav {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: calc(100% - 74px);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10% 5%;
+    }
+
+    .display {
+        display: block;
+    }
+
+    .mobileNav ul {
+        flex-flow: column nowrap;
+        background: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .mobileNav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nlink {
+        text-decoration: none;
+        text-align: center;
+        color: var(--grayishBlue);
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .nlink.active {
+        color: black;
+    }
+
+    .nlink:hover {
+        color: black;
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .digitalBanking {
+        flex-flow: column nowrap;
+        justify-content: center;
+        height: auto;
+    }
+
+    .dgtBankImg {
+        order: -1;
+    }
+
+    .dgtBankInfo {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    .dgtBankInfo h1 {
+        font-size: 40px;
+        font-weight: 200;
+        color: var(--darkBlue);
+    }
+
+    .dgtBankImg {
+        background: url("./images/bg-intro-mobile.svg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 350px;
+        padding: 0 10px;
+    }
+    
+    .dgtBankImg img {
+        width: 100%;
+        height: 470px;
+        object-position: center -120px;
+        object-fit: cover;
+    }
+
+    .chooseEbank {
+        text-align: center;
+    }
+
+    .easyBank {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0;
+    }
+    
+    .easyBank h1 {
+        margin: 20px 0;
+    }
+    
+    .easyBank div {
+        width: 95%;
+        margin: 20px 0;
+    }
+
+    .articlesList {
+        justify-content: center;
+        flex-flow: column nowrap;
+        padding: 15px 0;
+    }
+
+    .latestArticles {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .footerList {
+        flex-flow: column nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    
+    .footerDiv {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .footerDiv:last-child {
+        align-items: center;
+        width: 100%;
+    }
+
+    .footerDiv a {
+        padding: 15px 0;
+    }
+
+    .socialLinks {
+        margin: 30px 0;
+    }
+}
+
+@media screen and (min-width: 426px) and (max-width: 767px) {
+    .container {
+        position: relative;
+    }
+
+    .topHeader {
+        padding: 25px 0;
+    }
+
+    .navigation, .topHeader #requestBtn {
+        display: none;
+    }
+
+    .navToggler {
+        display: block;
+    }
+
+    .display {
+        display: block;
+        color: var(--grayishBlue);
+    }
+
+    .hide {
+        display: none;
+        color: var(--grayishBlue);
+    }
+
+    .mobileNav {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: calc(100% - 74px);
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10% 5%;
+    }
+
+    .mobileNav ul {
+        flex-flow: column nowrap;
+        background: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .mobileNav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nlink {
+        text-decoration: none;
+        text-align: center;
+        color: var(--grayishBlue);
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .nlink.active {
+        color: black;
+    }
+
+    .nlink:hover {
+        color: black;
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .digitalBanking {
+        flex-flow: column nowrap;
+        justify-content: center;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .dgtBankImg {
+        order: -1;
+    }
+
+    .dgtBankInfo {
+        margin: -70px auto 0;
+        width: 75%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .dgtBankInfo h1 {
+        font-size: 40px;
+    }
+
+    .dgtBankImg {
+        background: url("./images/bg-intro-mobile.svg");
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .dgtBankImg img {
+        width: 100%;
+        height: auto;
+        object-position: center -120px;
+        object-fit: cover;
+    }
+
+    .chooseEbank {
+        text-align: center;
+        padding: 5% 15%;
+    }
+
+    .chooseEbank h1 {
+        font-size: 40px;
+    }
+
+    .easyBank {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+    }
+    
+    .easyBank h1 {
+        font-size: 25px;
+        margin: 20px 0;
+    }
+    
+    .easyBank div {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .articles {
+        padding: 5% 15%;
+    }
+
+    .articlesList {
+        justify-content: center;
+        flex-flow: column nowrap;
+        padding: 15px 0;
+    }
+
+    .latestArticles {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .footerList {
+        flex-flow: column nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        padding: 40px 0;
+    }
+    
+    .footerDiv {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .footerDiv:last-child {
+        align-items: center;
+        width: 100%;
+    }
+
+    .footerDiv a {
+        padding: 15px 0;
+    }
+
+    .socialLinks {
+        margin: 30px 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        position: relative;
+    }
+
+    .topHeader {
+        padding: 25px 0;
+    }
+
+    .navigation, .topHeader #requestBtn {
+        display: none;
+    }
+
+    .navToggler {
+        display: block;
+    }
+
+    .display {
+        display: block;
+        color: var(--grayishBlue);
+    }
+
+    .hide {
+        display: none;
+        color: var(--grayishBlue);
+    }
+
+    .mobileNav {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+    }
+
+    .wrapper {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10% 5%;
+    }
+
+    .display {
+        display: block;
+    }
+
+    .mobileNav ul {
+        flex-flow: column nowrap;
+        background: var(--white);
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    .mobileNav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nlink {
+        text-decoration: none;
+        text-align: center;
+        color: var(--grayishBlue);
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .nlink.active {
+        color: black;
+    }
+
+    .nlink:hover {
+        color: black;
+    }
+
+    .overflow {
+        overflow: hidden;
+    }
+
+    .digitalBanking {
+        height: 500px;
+    }
+    
+    .dgtBankInfo {
+        margin: 0;
+        padding: 0 3%;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .dgtBankInfo h1 {
+        font-size: 44px;
+    }
+
+    .dgtBankInfo p {
+        text-align: justify;
+    }
+    
+    .dgtBankInfo #requestBtn {
+        margin: 25px 0;
+        display: block;
+    }
+    
+    .dgtBankImg {
+        background-position: 50% 30%;
+        height: 550px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .digitalBanking {
+        height: 550px;
+    }
+    
+    .dgtBankImg img {
+        width: auto;
+        height: 650px;
+        object-position: center;
+        object-fit: cover;
+        object-position: 50% -100px;
+    }
+
+    .chooseEbank {
+        text-align: center;
+    }
+    
+    .easyBank {
+        flex-flow: row wrap;
+        padding: 5% 0;
+    }
+    
+    .easyBank h1 {
+        font-size: 24px;
+        margin: 20px 0;
+    }
+    
+    .easyBank div {
+        width: 48%;
+        margin: 30px 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .articlesList {
+        align-items: flex-start;
+        flex-flow: row wrap;
+    }
+    
+    .latestArticles {
+        width: 48%;
+        margin-bottom: 30px;
+        align-self: stretch;
+    }
+
+    .footerList #requestBtn {
+        display: block;
+    }
+    
+    .footerList {
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .footerDiv {
+        align-self: stretch;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        width: 33%;
+    }
+
+    .footerDiv:last-child {
+        margin-top: 20px;
+    }
+
+    .footerDiv p {
+        text-align: center;
+    }
+
+    #svgLogo {
+        margin: 0;
+    }
+
+    .footerDiv:first-child {
+        align-items: center;
+    }
+
+    .socialLinks {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    .footerDiv a {
+        padding: 5px 0;
+    }
+    
+    .footerDiv:last-child {
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+

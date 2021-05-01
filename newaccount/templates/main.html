@@ -1,145 +1,170 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!-- ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/newaccount/templates/mockups/favicon-32x32.png">
+  <link rel="stylesheet" href="/newaccount/templates/static/style.css">
+
+  <title> NU Bank - Admin</title>
+
 </head>
+
 <body>
 
+  <div class="container">
+    <div class="header">
+      <div class="topHeader">
 
-  
-    
+        <img src="/newaccount/templates/mockups/logo 1.svg" alt="easy banking logo">
 
-    <div class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div class="relative flex items-center justify-between">
-          <a href="/" aria-label="Company" title="Company" class="inline-flex items-center">
-            <svg class="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linejoin="round" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" stroke="currentColor" fill="none">
-              <rect x="3" y="1" width="7" height="12"></rect>
-              <rect x="3" y="17" width="7" height="6"></rect>
-              <rect x="14" y="1" width="7" height="6"></rect>
-              <rect x="14" y="11" width="7" height="12"></rect>
-            </svg>
-            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">NU Bank</span>
-          </a>
-          <ul class="flex items-center hidden space-x-8 lg:flex">
-            <li>
-              <a
-                href="/"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-                aria-label="Admin"
-                title="Admin"
-              >
-                Admin
-              </a>
-            </li>
+        <nav class="navigation">
+          <ul>
+            <li><a class="navLink active" href="#">Home</a></li>
+            <li><a class="navLink" href="#">Retail Banking</a></li>
+            <li><a class="navLink" href="#">Corporate Banking</a></li>
+            <li><a class="navLink" href="#">Support</a></li>
+            <li><a class="navLink" href="#">Useful Links</a></li>
           </ul>
-          <!-- Mobile menu -->
-          <div class="lg:hidden">
-            <button aria-label="Open Menu" title="Open Menu" class="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline hover:bg-deep-purple-50 focus:bg-deep-purple-50">
-              <svg class="w-5 text-gray-600" viewBox="0 0 24 24">
-                <path fill="currentColor" d="M23,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path>
-                <path fill="currentColor" d="M23,6H1C0.4,6,0,5.6,0,5s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,6,23,6z"></path>
-                <path fill="currentColor" d="M23,20H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h22c0.6,0,1,0.4,1,1S23.6,20,23,20z"></path>
-              </svg>
-            </button>
-          </div>
+        </nav>
+
+        <button id="requestBtn">Welcome Abhinav!</button>
+
+        <span id="btn" class="navToggler">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="11" id="show" class="display">
+            <g fill="#2D314D" fill-rule="evenodd">
+              <path d="M0 0h24v1H0zM0 5h24v1H0zM0 10h24v1H0z" />
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" id="hide" class="hide">
+            <g fill="#2D314D" fill-rule="evenodd">
+              <path d="M.868.661l16.97 16.97-.706.708L.162 1.369z" />
+              <path d="M.161 17.632L17.131.662l.708.706-16.97 16.97z" />
+            </g>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+
+
+    <div class="digitalBanking">
+      <div class="dgtBankInfo">
+        <h1>Next generation digital banking</h1>
+        <p class="text-muted">This is admin interface for NU Bank to get information about customers!</p>
+        <a href="http://127.0.0.1:8000/add-customer"><button id="requestBtn">Register a New Customer</button></a>
+        <a href="http://127.0.0.1:8000/list-customer"><button id="requestBtn">View all Customers</button></a>
+      </div>
+      <div class="dgtBankImg">
+        <img src="/newaccount/templates/mockups/Frame 16.png" alt="image-mockups" width="80%">
+      </div>
+    </div>
+    <div class="chooseEbank">
+      <h1>Why choose NUBank?</h1>
+      <p class="text-muted">We leverage Open Banking to turn your bank account into your financial hub. <br>Control
+        your
+        finances like never before.</p>
+      <div class="easyBank">
+        <div>
+          <img src="/newaccount/templates/mockups/icon-online.svg" alt="icon-online">
+          <h1>Online Banking</h1>
+          <p class="text-muted">Our modern web and mobile applications allow you to keep track of your finances
+            wherever you are in the world.</p>
+        </div>
+        <div>
+          <img src="/newaccount/templates/mockups/icon-budgeting.svg" alt="icon-budgeting">
+          <h1>Simple Budgeting</h1>
+          <p class="text-muted">See exactly where your money goes each month. Receive notifications when you’re
+            close to hitting your limits.</p>
+        </div>
+        <div>
+          <img src="/newaccount/templates/mockups/icon-onboarding.svg" alt="icon-onboarding">
+          <h1>Fast Onboarding</h1>
+          <p class="text-muted">We don’t do branches. Open your account in minutes online and start taking control
+            of your finances right away.</p>
+        </div>
+        <div>
+          <img src="/newaccount/templates/mockups/icon-api.svg" alt="icon-api">
+          <h1>Open API</h1>
+          <p class="text-muted">Manage your savings, investments, pension, and much more from one account. Tracking
+            your money has never been easier.</p>
         </div>
       </div>
-
-
-
-      <div class="container">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-      
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="https://www.usnews.com/dims4/USNEWS/244b205/2147483647/thumbnail/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fb3%2Fd2%2F7e43de4d4f1cad20011c8629a458%2F210219-londonbanks-stock.jpg" alt="Los Angeles" style="width:100%;">
-            </div>
-      
-            <div class="item">
-              <img src="https://media.istockphoto.com/photos/male-realtor-handshaking-clients-after-successful-negotiations-in-picture-id994164766?k=6&m=994164766&s=612x612&w=0&h=E26p6AjfDI2spudSjq1Ol5k1tjqC5WHlhOS32_a5dnk=" alt="Chicago" style="width:100%;">
-            </div>
-          
-            <div class="item">
-              <img src="https://www.moneymakerfinancial.com/blog/wp-content/uploads/2018/12/banking-stock.jpg" alt="New york" style="width:100%;">
-            </div>
-          </div>
-      
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-xl sm:mx-auto lg:max-w-2xl">
-          <div class="flex flex-col mb-16 sm:text-center sm:mb-0">
-            <a href="/" class="mb-6 sm:mx-auto">
-              <div class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50">
-                <svg class="w-10 h-10 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                </svg>
-              </div>
-            </a>
-            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-              <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                <span class="relative inline-block">
-                  <svg viewBox="0 0 52 24" fill="currentColor" class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                    <defs>
-                      <pattern id="e77df901-b9d7-4b9b-822e-16b2d410795b" x="0" y="0" width=".135" height=".30">
-                        <circle cx="1" cy="1" r=".7"></circle>
-                      </pattern>
-                    </defs>
-                    <rect fill="url(#e77df901-b9d7-4b9b-822e-16b2d410795b)" width="52" height="24"></rect>
-                  </svg>
-                </span>
-                Add a Customer
-              </h2>
-              <p class="text-base text-gray-700 md:text-lg">
-                Interface for NU Bank to register a New Customer!
-              </p>
-            </div>
-            <div>
-              <a
-                href="http://127.0.0.1:8000/add-customer"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Add a New Customer
-              </a>
-            </div>
+    </div>
+    
+    <div class="footer">
+      <div class="footerList">
+        <div class="footerDiv">
+          <svg width="139" height="20" viewBox="0 0 139 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.802 0L0 19.704H5.986L16.789 0H10.802Z" fill="url(#paint0_linear)"/>
+            <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M18.1709 0L7.36792 19.704H13.3539L24.1569 0H18.1709Z" fill="url(#paint1_linear)"/>
+            <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M25.5391 0L14.7371 19.704H20.7231L31.5251 0H25.5391Z" fill="url(#paint2_linear)"/>
+            <path d="M32.9668 18H38.1147V10.2154C38.1147 8.92215 38.8555 7.98047 40.0734 7.98047C41.3666 7.98047 42.0195 8.83426 42.0195 10.228V18H47.1674V9.09794C47.1674 5.77065 45.4598 3.83705 42.4088 3.83705C40.3119 3.83705 38.8931 4.84152 38.2151 6.71233H38.1147V4.13839H32.9668V18ZM53.7341 18.3013C55.8309 18.3013 57.2497 17.2969 57.9277 15.4261H58.0282V18H63.1761V4.13839H58.0282V11.923C58.0282 13.2162 57.2874 14.1579 56.0695 14.1579C54.7762 14.1579 54.1233 13.3041 54.1233 11.9104V4.13839H48.9754V13.0405C48.9754 16.3677 50.683 18.3013 53.7341 18.3013ZM74.5642 18.3013C78.0045 18.3013 79.9757 15.6897 79.9757 11.0692V11.0566C79.9757 6.41099 78.0296 3.83705 74.5391 3.83705C72.5552 3.83705 71.0737 4.87919 70.4208 6.637H70.3203V-0.118024H65.1724V18H70.3203V15.627H70.4208C71.0485 17.2969 72.5552 18.3013 74.5642 18.3013ZM72.5427 14.1579C71.1867 14.1579 70.3203 13.0153 70.3203 11.0818V11.0692C70.3203 9.12305 71.1992 7.98047 72.5427 7.98047C73.8736 7.98047 74.7525 9.12305 74.7525 11.0566V11.0692C74.7525 12.9777 73.8862 14.1579 72.5427 14.1579ZM85.7514 18.1758C87.5343 18.1758 88.8276 17.435 89.606 16.1166H89.7065V18H94.8544V8.57059C94.8544 5.75809 92.2804 3.83705 88.4258 3.83705C84.3828 3.83705 81.9847 5.68276 81.7712 8.50781L81.7586 8.67104H86.3541L86.3792 8.54548C86.4922 7.98047 87.0823 7.5159 88.137 7.5159C89.1917 7.5159 89.7065 8.01814 89.7065 8.82171V9.38672L86.7935 9.57506C83.1021 9.82617 81.043 11.2952 81.043 13.9696V13.9821C81.043 16.3677 82.9514 18.1758 85.7514 18.1758ZM86.0653 13.6055V13.5929C86.0653 12.9023 86.555 12.4754 87.6473 12.4001L89.7065 12.2494V13.1283C89.7065 14.0449 88.8652 14.7229 87.6348 14.7229C86.6805 14.7229 86.0653 14.3337 86.0653 13.6055ZM96.8005 18H101.948V10.2154C101.948 8.92215 102.689 7.98047 103.907 7.98047C105.2 7.98047 105.853 8.83426 105.853 10.228V18H111.001V9.09794C111.001 5.77065 109.294 3.83705 106.242 3.83705C104.146 3.83705 102.727 4.84152 102.049 6.71233H101.948V4.13839H96.8005V18ZM112.935 18H118.083V14.0073L118.748 13.1409L121.623 18H127.537L122.603 10.0522L127.211 4.13839H121.548L118.183 9.14816H118.083V-0.118024H112.935V18Z" fill="#2D314D"/>
+            </g>
+            <defs>
+            <linearGradient id="paint0_linear" x1="12.1208" y1="-7.1397e-07" x2="0.484379" y2="18.1287" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#33D35E"/>
+            <stop offset="1" stop-color="#2AB6D9"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear" x1="19.4887" y1="-7.1397e-07" x2="7.8523" y2="18.1287" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#33D35E"/>
+            <stop offset="1" stop-color="#2AB6D9"/>
+            </linearGradient>
+            <linearGradient id="paint2_linear" x1="26.8572" y1="-7.1397e-07" x2="15.2204" y2="18.1281" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#33D35E"/>
+            <stop offset="1" stop-color="#2AB6D9"/>
+            </linearGradient>
+            <clipPath id="clip0">
+            <rect width="139" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+          <div class="socialLinks">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path fill="#FFF" id="link"
+                  d="M18.896 0H1.104C.494 0 0 .494 0 1.104v17.793C0 19.506.494 20 1.104 20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583 1.578-3.99 3.883-3.99 1.104 0 2.052.082 2.329.119v2.7h-1.598c-1.254 0-1.496.597-1.496 1.47v1.928h2.989l-.39 3.018h-2.6V20h5.098c.608 0 1.102-.494 1.102-1.104V1.104C20 .494 19.506 0 18.896 0z" />
+              </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                <path fill="#FFF" id="link"
+                  d="M10.333 0c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10zm3.701 14.077c-1.752.12-5.653.12-7.402 0C4.735 13.947 4.514 13.018 4.5 10c.014-3.024.237-3.947 2.132-4.077 1.749-.12 5.651-.12 7.402 0 1.898.13 2.118 1.059 2.133 4.077-.015 3.024-.238 3.947-2.133 4.077zM8.667 8.048l4.097 1.949-4.097 1.955V8.048z" />
+              </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
+                <path fill="#FFF" id="link"
+                  d="M20.667 2.797a8.192 8.192 0 01-2.357.646 4.11 4.11 0 001.804-2.27 8.22 8.22 0 01-2.606.996A4.096 4.096 0 0014.513.873c-2.649 0-4.595 2.472-3.997 5.038a11.648 11.648 0 01-8.457-4.287 4.109 4.109 0 001.27 5.478A4.086 4.086 0 011.47 6.59c-.045 1.901 1.317 3.68 3.29 4.075a4.113 4.113 0 01-1.853.07 4.106 4.106 0 003.834 2.85 8.25 8.25 0 01-6.075 1.7 11.616 11.616 0 006.29 1.843c7.618 0 11.922-6.434 11.662-12.205a8.354 8.354 0 002.048-2.124z" />
+              </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <path fill="#FFF" id="link"
+                  d="M10 0C4.478 0 0 4.477 0 10c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.522 0 10-4.477 10-10S15.522 0 10 0z" />
+              </svg></a>
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                <path fill="#FFF" id="link"
+                  d="M10.333 1.802c2.67 0 2.987.01 4.042.059 2.71.123 3.976 1.409 4.1 4.099.048 1.054.057 1.37.057 4.04 0 2.672-.01 2.988-.058 4.042-.124 2.687-1.386 3.975-4.099 4.099-1.055.048-1.37.058-4.042.058-2.67 0-2.986-.01-4.04-.058-2.717-.124-3.976-1.416-4.1-4.1-.048-1.054-.058-1.37-.058-4.041 0-2.67.01-2.986.058-4.04.124-2.69 1.387-3.977 4.1-4.1 1.054-.048 1.37-.058 4.04-.058zm0-1.802C7.618 0 7.278.012 6.211.06 2.579.227.56 2.242.394 5.877.345 6.944.334 7.284.334 10s.011 3.057.06 4.123c.166 3.632 2.181 5.65 5.816 5.817 1.068.048 1.408.06 4.123.06 2.716 0 3.057-.012 4.124-.06 3.628-.167 5.651-2.182 5.816-5.817.049-1.066.06-1.407.06-4.123s-.011-3.056-.06-4.122C20.11 2.249 18.093.228 14.458.06 13.39.01 13.049 0 10.333 0zm0 4.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zm0 8.468a3.333 3.333 0 110-6.666 3.333 3.333 0 010 6.666zm5.339-9.87a1.2 1.2 0 10-.001 2.4 1.2 1.2 0 000-2.4z" />
+              </svg></a>
           </div>
         </div>
+        <div class="footerDiv">
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footerDiv">
+          <a href="#">Careers</a>
+          <a href="#">Support</a>
+          <a href="#">Privacy</a>
+        </div>
+        <div class="footerDiv">
+          <a href="#"><button id="requestBtn">Contact Us</button></a>
+          <p>© NUBank. All Rights Reserved</p>
+        </div>
       </div>
-
-
-
-
+    </div>
+    <div class="attribution">
+      Made with love by Abhinav Gupta</a>.
+    </div>
+    <script src="script.js"></script>
+  </div>
 </body>
+
 </html>
